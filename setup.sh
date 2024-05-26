@@ -17,13 +17,13 @@ echo -e "\033[1;91m
      Team: TermuxHackz Society
  Version: \033[1;92m2.1
    \033[0m"
-   echo
+   $'echo\r'
 	printf "\e[1;34m\tSelect your terminal to install X-osint \e[0m\n"
 	printf "\e[1;91m\t[!] PLEASE MAKE SURE YOU CHOOSE CORRECTLY [!] \e[0m\n\n"
 	printf "\e[1;34m\t\t[\e[0m\e[1;77m01\e[0m\e[1;34m]\e[0m\e[1;93mTermux\e[0m\e[1;91m [STABLE]\e[0m\n"
 printf "\e[1;34m\t\t[\e[0m\e[1;77m02\e[0m\e[1;34m]\e[0m\e[1;93mLinux\e[0m\n"
 read -p $'\n\e[1;92m[\e[0m\e[1;77m*\e[0m\e[1;92m] Choose your terminal: \e[0m\en' terminal
-
+$'\r'
 if [[ $terminal == "1" || $terminal == "01" ]]; then
 printf "\e[1;94mYou have choosen Termux as your current terminal packages for Termux will Start to install... \e[0m\n"
 sleep 3
@@ -118,7 +118,7 @@ printf "\e[1;91m[*]\e[1;97m X-osint Installed Successfully, Now its ready�
 printf "\e[1;91m[*]\e[1;97m After reopen your termux just type '\e[1;91mxosint\e[1;97m' to launch X-osint \e[0m" 
 exit
  
- elif [[ $terminal == "02" || $terminal == "2" ]]; then
+if [[ $terminal == "1" || $terminal == "02" ]]; then
 printf "\e[1;94mYou have choosen Linux as your current terminal packages for Linux will Start to install... \e[0m\n"
 sleep 2
 clear || cls 
